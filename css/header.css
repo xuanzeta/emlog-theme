@@ -224,6 +224,7 @@ body {
     color: #ccc;
     padding-bottom: 5px;
     border-bottom: 1px dashed #ddd;
+    height: 20px;
 }
 #content .submitted {
 	float: left;
