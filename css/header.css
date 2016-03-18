@@ -50,6 +50,9 @@ body {
 	position: relative;
     z-index: 1035;
 }
+.container-fluid>.navbar-header {
+    margin: 0;
+}
 .navbar>.container-fluid .navbar-brand {
 	background: #00a3cf;
     height: 40px;
@@ -58,6 +61,15 @@ body {
     font-size: 26px;
     line-height: 40px;
     padding: 0px 5px;
+}
+#navtoggle {
+	background-color: #00a3cf;
+    padding: 10px 10px;
+    position: absolute;
+    top: 2px;
+    right: 60px;
+    color: #fff;
+    cursor: pointer;
 }
 .navbar-header:before {
 	content: " ";
@@ -153,6 +165,23 @@ body {
 .nav-right-top a {
 	color: #FFF;
     text-decoration: none;
+}
+.navsecond {
+	list-style: none;
+    background: #333;
+    color: #FFF;
+    padding: 10px 0;
+    display: none;
+}
+.navsecond a {
+	display: block;
+    font-size: 14px;
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px 0 10px 20px;
+}
+.navsecond a:hover {
+	background: #00a3cf;
 }
 /*log_list*/
 .contenttitle {
