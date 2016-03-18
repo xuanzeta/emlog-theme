@@ -8,6 +8,9 @@ $(function () {
     $('#navtoggle').click(function () {
         $('.navsecond').toggle();
     });
+    $('.navsecond').click(function () {
+        $(this).hide();
+    });
 });
 function navToggle () {
     if ($('.container-fluid').width() - $('.navbar-header').width() - 90 - $('#menu').width() <= 0 ) {
