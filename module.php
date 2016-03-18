@@ -254,17 +254,9 @@ function blog_navi(){
 	<div class="container-fluid">
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">
-	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	<span class="sr-only">Toggle navigation</span>
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-	</button>
+	<span id="navtoggle" class="logo-switch glyphicon glyphicon-align-justify" aria-hidden="true"></span>
 	<a class="navbar-brand" href="#"><?php echo Option::get('blogname'); ?></a><span class="corner"></span>
 	</div>
-
-	<!-- Collect the nav links, forms, and other content for toggling -->
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	<ul id="menu" class="nav navbar-nav">
 	<?php
 	foreach($navi_cache as $value):
@@ -305,8 +297,22 @@ function blog_navi(){
 		</li>
 	<?php endforeach; ?>
 	</ul>
-	</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
+	<ul class="navsecond">
+	<?php
+	$navi_cache = $CACHE->readCache('navi');
+	foreach($navi_cache as $value):
+        if ($value['pid'] != 0) {
+            continue;
+        }
+		$newtab = $value['newtab'] == 'y' ? 'target="_blank"' : '';
+        $value['url'] = $value['isdefault'] == 'y' || substr( $value['url'], 0, 1 ) == '/' ? BLOG_URL . trim($value['url'], '/') : trim($value['url'], '/');
+		?>
+		<li>
+			<a href="<?php echo $value['url']; ?>" <?php echo $newtab;?>><?php echo $value['naviname']; ?></a>
+		</li>
+	<?php endforeach; ?>
+	</ul>
 	<div class="scrollHover"></div>
 	<div class="nav-right-top">
 	<?php if (ROLE == ROLE_ADMIN || ROLE == ROLE_WRITER): ?>

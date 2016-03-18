@@ -1,7 +1,26 @@
 $(function () {
     scrollNav();
     $().UItoTop({ easingType: 'easeOutQuart' });
+    navToggle();
+    $(window).resize(function() { 
+        navToggle();
+    });
+    $('#navtoggle').click(function () {
+        $('.navsecond').toggle();
+    });
 });
+function navToggle () {
+    if ($('.container-fluid').width() - $('.navbar-header').width() - 90 - $('#menu').width() <= 0 ) {
+        $('#menu').hide();
+        $('.scrollHover').hide();
+        $('#navtoggle').show();
+    } else {
+        $('#menu').show();
+        $('.scrollHover').show();
+        $('#navtoggle').hide();
+        $('.navsecond').hide();
+    }
+}
 function scrollNav() {
     function i(e) {
         t.removeClass("hover"),
