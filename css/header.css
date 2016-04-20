@@ -95,6 +95,8 @@ body {
 	margin: 0 40px 0 0;
 }
 .navbar-nav li a {
+	white-space: nowrap;
+	overflow: hidden;
 	width: 60px;
 	display: block;
 	text-align: center;
@@ -275,9 +277,9 @@ body {
 #content .comment-post .cancel-reply{float:right;font-size:12px;cursor:pointer; _cursor:hand;padding-right:10%}
 #content .comment-post .cancel-reply:hover{text-decoration:underline}
 #content .comment-post small{font-size:12px; color:#999}
-#content .comment-post input{padding:5px 5px; border:1px #b6b6b6 solid; font-size:12px; color:#333; width:40%}
-#content .comment-post #comment{ width:90%; border:1px #b6b6b6 solid; font-size:12px; color:#333}
-#content .comment-post #comment_submit{background:url(../images/em_button.gif) no-repeat; border:0; color:#000000; width:111px; height:29px; text-align:center; cursor:pointer; _cursor:hand}
+#content .comment-post input{padding:5px 10px;border: 1px solid #00a3cf;background-color: transparent; font-size:12px; color:#333; width:40%}
+#content .comment-post #comment{ width:90%; border: 1px solid #00a3cf;padding: 5px 10px;background-color: transparent; font-size:12px; color:#333}
+#content .comment-post #comment_submit{background:#00a3cf; border:0; color:#FFFFFF; width:111px; height:29px; text-align:center; cursor:pointer; _cursor:hand}
 #content .comment-post .input{width:100px}
 #content .comment{margin:10px 0; padding:10px 0px; font-size:12px; border-bottom:1px #f7f7f7  solid; overflow:hidden; color:#333; height:100%; zoom:1}
 #content .comment span{color:#ff7a15;}
@@ -581,3 +583,11 @@ body {
 .tw ul li .bttome .post{ font-size:12px;line-height:14px;margin:0; text-align:right; float:none;clear:both; width:610px; background:0; border:0;}
 .tw ul li .bttome .time{ float:none;}
 .tw p .t_img{background:url(../images/img.gif) no-repeat;padding: 0 7px;margin: 0 0 0 10px;}
+/*蓝叶代码复制*/
+pre {
+	border-radius: 0;
+}
+.copy_code {
+    padding: 2px 5px 0 5px !important;
+    background: #00A3CF !important;
+}

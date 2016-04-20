@@ -450,19 +450,19 @@ function blog_comments_post($logid,$ckname,$ckmail,$ckurl,$verifyCode,$allow_rem
 			<input type="hidden" name="gid" value="<?php echo $logid; ?>" />
 			<?php if(ROLE == ROLE_VISITOR): ?>
 			<p>
-				<input type="text" name="comname" maxlength="49" value="<?php echo $ckname; ?>" size="22" tabindex="1">
+				<input type="text" name="comname" maxlength="49" placeholder="请输入昵称" value="<?php echo $ckname; ?>" size="22" tabindex="1">
 				<label for="author"><small>昵称</small></label>
 			</p>
 			<p>
-				<input type="text" name="commail"  maxlength="128"  value="<?php echo $ckmail; ?>" size="22" tabindex="2">
+				<input type="text" name="commail"  maxlength="128" placeholder="请输入地址"   value="<?php echo $ckmail; ?>" size="22" tabindex="2">
 				<label for="email"><small>邮件地址 (选填)</small></label>
 			</p>
 			<p>
-				<input type="text" name="comurl" maxlength="128"  value="<?php echo $ckurl; ?>" size="22" tabindex="3">
+				<input type="text" name="comurl" maxlength="128" placeholder="请输入个人主页"   value="<?php echo $ckurl; ?>" size="22" tabindex="3">
 				<label for="url"><small>个人主页 (选填)</small></label>
 			</p>
 			<?php endif; ?>
-			<p><textarea name="comment" id="comment" rows="10" tabindex="4"></textarea></p>
+			<p><textarea name="comment" id="comment" rows="10" tabindex="4"  placeholder="请输入评论内容" ></textarea></p>
 			<p><?php echo $verifyCode; ?> <input type="submit" id="comment_submit" value="发表评论" tabindex="6" /></p>
 			<input type="hidden" name="pid" id="comment-pid" value="0" size="22" tabindex="1"/>
 		</form>
