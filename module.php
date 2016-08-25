@@ -255,7 +255,7 @@ function blog_navi(){
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">
 	<span id="navtoggle" class="logo-switch glyphicon glyphicon-align-justify" aria-hidden="true"></span>
-	<a class="navbar-brand" href="#"><?php echo Option::get('blogname'); ?></a><span class="corner"></span>
+	<a class="navbar-brand" href="/"><?php echo Option::get('blogname'); ?></a><span class="corner"></span>
 	</div>
 	<ul id="menu" class="nav navbar-nav">
 	<?php

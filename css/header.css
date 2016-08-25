@@ -281,7 +281,7 @@ body {
 #content .comment-post #comment{ width:90%; border: 1px solid #00a3cf;padding: 5px 10px;background-color: transparent; font-size:12px; color:#333}
 #content .comment-post #comment_submit{background:#00a3cf; border:0; color:#FFFFFF; width:111px; height:29px; text-align:center; cursor:pointer; _cursor:hand}
 #content .comment-post .input{width:100px}
-#content .comment{margin:10px 0; padding:10px 0px; font-size:12px; border-bottom:1px #f7f7f7  solid; overflow:hidden; color:#333; height:100%; zoom:1}
+#content .comment{margin:10px 0; padding:10px 0px; font-size:12px; border-bottom:1px #f7f7f7  solid; overflow:hidden; color:#333; zoom:1}
 #content .comment span{color:#ff7a15;}
 #content .comment .comment-time{color:#999999; display:inline; font-size:10px;}
 #content .comment .avatar{float:left;margin:5px}
