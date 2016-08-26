@@ -21,6 +21,17 @@ if(!defined('EMLOG_ROOT')) {exit('error!');}
 	        </div>
 	  	</div>
 	  	<?php echo $log_content; ?>
+<?php
+  $blogname = Option::get('blogname');
+  $url = Url::log($logid);
+  $name = "<a style=\"color:red;\" href=\"".BLOG_URL."\">".$blogname."</a>";
+  ?>
+  <p>
+  版权所有：《<?php echo $name; ?>》 => 《<a href="<?php echo $url; ?>"><?php echo $log_title;  ?></a>》<br />
+  本文地址：<a href="<?php echo $url; ?>"><?php echo $url; ?></a><br />
+  除非注明，文章均为 《<?php echo $name; ?>》 原创，欢迎转载！转载请注明本文地址，谢谢。<br />
+  </p>
+		
 		<div class="blog-bottom">
 	        <a class="blog-comment" href="#comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <?php echo $comnum; ?></a>
 	    </div>
